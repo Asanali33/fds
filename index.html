@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Studio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #6c63ff, #48bfe3);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero__title {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero__subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .hero__button {
+      background: #fff;
+      color: #333;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero__button:hover {
+      background: #f0f0f0;
+    }
+
+    /* Why */
+    .why {
+      padding: 80px 20px;
+      background: #f8f9fa;
+      text-align: center;
+    }
+
+    .why__title {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .why__items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .why__item {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      flex: 1 1 250px;
+    }
+
+    /* Reviews */
+    .reviews {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .reviews__title {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .reviews__list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .reviews__item {
+      background: #f2f2f2;
+      border-radius: 10px;
+      padding: 20px;
+      font-style: italic;
+    }
+
+    /* Contacts */
+    .contacts {
+      background: #6c63ff;
+      color: #fff;
+      padding: 80px 20px;
+    }
+
+    .contacts__content {
+      text-align: center;
+    }
+
+    .contacts__title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .contacts__form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contacts__input,
+    .contacts__textarea {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contacts__textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .contacts__button {
+      background: #fff;
+      color: #6c63ff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contacts__button:hover {
+      background: #f1f1f1;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Адаптив */
+    @media (max-width: 768px) {
+      .hero__title {
+        font-size: 2rem;
+      }
+
+      .why__items {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 60px 10px;
+      }
+
+      .hero__title {
+        font-size: 1.7rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Приветственная секция -->
+  <header class="hero">
+    <div class="hero__content container">
+      <h1 class="hero__title">Мы создаём красивые сайты</h1>
+      <p class="hero__subtitle">Креатив, качество и адаптивность — в каждом проекте</p>
+      <a href="#contacts" class="hero__button">Связаться с нами</a>
+    </div>
+  </header>
+
+  <!-- Почему мы -->
+  <section class="why">
+    <div class="why__content container">
+      <h2 class="why__title">Почему выбирают нас</h2>
+      <div class="why__items">
+        <div class="why__item">⚡ Быстрая работа</div>
+        <div class="why__item">🎨 Современный дизайн</div>
+        <div class="why__item">💸 Честные цены</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="reviews">
+    <div class="reviews__content container">
+      <h2 class="reviews__title">Отзывы клиентов</h2>
+      <div class="reviews__list">
+        <div class="reviews__item">"Отличная работа, сайт выглядит супер!" — Алия</div>
+        <div class="reviews__item">"Быстро, профессионально и красиво." — Тимур</div>
+        <div class="reviews__item">"Сайт адаптивный и удобный, всё классно!" — Елена</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contacts" id="contacts">
+    <div class="contacts__content container">
+      <h2 class="contacts__title">Связаться с нами</h2>
+      <form class="contacts__form">
+        <input type="text" placeholder="Ваше имя" class="contacts__input" required>
+        <input type="email" placeholder="Email" class="contacts__input" required>
+        <textarea placeholder="Сообщение" class="contacts__textarea" required></textarea>
+        <button type="submit" class="contacts__button">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Creative Studio — Все права защищены
+  </footer>
+
+</body>
+</html>
